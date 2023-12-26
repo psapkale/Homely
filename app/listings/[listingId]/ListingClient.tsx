@@ -96,9 +96,7 @@ const ListingClient = ({
    }, [dateRange, listing.price]);
 
    const category = useMemo(() => {
-      return categories.find((item) => {
-         item.label === listing.category;
-      });
+      return categories.find((item) => item.label === listing.category);
    }, [listing.category]);
 
    return (

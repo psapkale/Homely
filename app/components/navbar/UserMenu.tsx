@@ -59,23 +59,38 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
                   {currentUser ? (
                      <>
                         <MenuItem
-                           onClick={() => router.push('/trips')}
+                           onClick={() => {
+                              router.push('/trips');
+                              toggleOpen();
+                           }}
                            label='My trips'
                         />
                         <MenuItem
-                           onClick={() => router.push('/favourites')}
+                           onClick={() => {
+                              router.push('/favourites');
+                              toggleOpen();
+                           }}
                            label='My favourites'
                         />
                         <MenuItem
-                           onClick={() => router.push('/reservations')}
+                           onClick={() => {
+                              router.push('/reservations');
+                              toggleOpen();
+                           }}
                            label='My reservations'
                         />
                         <MenuItem
-                           onClick={() => router.push('/properties')}
+                           onClick={() => {
+                              router.push('/properties');
+                              toggleOpen();
+                           }}
                            label='My properties'
                         />
                         <MenuItem
-                           onClick={rentModal.onOpen}
+                           onClick={() => {
+                              rentModal.onOpen();
+                              toggleOpen();
+                           }}
                            label='Homely my home'
                         />
                         <hr />
@@ -84,9 +99,18 @@ const UserMenu = ({ currentUser }: UserMenuProps) => {
                      </>
                   ) : (
                      <>
-                        <MenuItem onClick={loginModal.onOpen} label='Login' />
                         <MenuItem
-                           onClick={registerModal.onOpen}
+                           onClick={() => {
+                              loginModal.onOpen();
+                              toggleOpen();
+                           }}
+                           label='Login'
+                        />
+                        <MenuItem
+                           onClick={() => {
+                              registerModal.onOpen();
+                              toggleOpen();
+                           }}
                            label='Sign up'
                         />
                      </>

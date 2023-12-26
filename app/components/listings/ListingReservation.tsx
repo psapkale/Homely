@@ -31,11 +31,13 @@ const ListingReservation = ({
          </div>
 
          <hr />
-         <Calendar
-            value={dateRange}
-            disabledDates={disabledDates}
-            onChange={(value) => onChangeDate(value.selection)}
-         />
+         <div className='grid place-content-center'>
+            <Calendar
+               value={dateRange}
+               disabledDates={disabledDates}
+               onChange={(value) => onChangeDate(value.selection)}
+            />
+         </div>
 
          <hr />
          <div className='p-4'>

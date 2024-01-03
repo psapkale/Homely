@@ -36,7 +36,7 @@ export async function POST(request: Request, { params }: { params: IParams }) {
 
       return NextResponse.json(user);
    } catch (error: any) {
-      throw new Error(error);
+      throw new Error('Something went wrong');
    }
 }
 
@@ -68,6 +68,6 @@ export async function DELETE(
 
       return NextResponse.json(user);
    } catch (error: any) {
-      throw new Error(error);
+      throw new Error('Something went wrong');
    }
 }

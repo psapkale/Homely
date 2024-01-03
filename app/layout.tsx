@@ -1,5 +1,6 @@
-import { Nunito } from 'next/font/google';
+export const dynamic = 'force-dynamic';
 
+import { Nunito } from 'next/font/google';
 import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from './components/navbar/Navbar';

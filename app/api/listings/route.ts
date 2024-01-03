@@ -46,6 +46,6 @@ export async function POST(request: Request) {
 
       return NextResponse.json(listing);
    } catch (error: any) {
-      throw new Error(error);
+      throw new Error('Something went wrong');
    }
 }

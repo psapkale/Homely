@@ -1,5 +1,6 @@
 import prisma from '@/app/libs/prismadb';
 import getCurrentUser from './getCurrentUser';
+import CustomErrorHandler from '@/app/components/CustomErrorHandler';
 
 export default async function getFavouriteListings() {
    try {
@@ -24,6 +25,6 @@ export default async function getFavouriteListings() {
 
       return safeFavourites;
    } catch (error: any) {
-      throw new Error(error);
+      throw new Error('Something went wrong');
    }
 }

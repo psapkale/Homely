@@ -32,6 +32,6 @@ export async function DELETE(
 
       return NextResponse.json(listing);
    } catch (error: any) {
-      throw new Error(error);
+      throw new Error('Something went wrong');
    }
 }
